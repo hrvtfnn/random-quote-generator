@@ -1,0 +1,149 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: rgb(147, 191, 207);
+  font-family: "Montserrat", sans-serif;
+}
+
+/* Box */
+
+.box {
+  width: 610px;
+  background-color: rgb(250, 248, 241);
+  border-radius: 25px;
+  padding: 30px;
+  box-shadow: 0 12px 35px rgb(66, 125, 147);
+}
+
+.box header {
+  font-family: "Lobster", cursive;
+  font-size: 32px;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Content */
+
+.content .quotes {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+header,
+.content,
+.quotes i {
+  color: rgb(41, 44, 48);
+}
+
+.quotes {
+  font-size: 22px;
+}
+
+.quotes i:first-child {
+  margin: 3px 10px 0 0;
+  font-size: 16px;
+}
+
+.quotes i:last-child {
+  margin: 0 0 3px 10px;
+  font-size: 16px;
+  display: flex;
+  align-items: flex-end;
+}
+
+.author {
+  font-style: italic;
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* Features */
+
+.box .buttons {
+  border-top: 1px solid rgb(96, 150, 180);
+  margin-top: 20px;
+}
+
+.buttons .features {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.features ul {
+  list-style: none;
+  display: flex;
+}
+
+.features ul li {
+  height: 47px;
+  width: 47px;
+  margin: 0 5px;
+  display: flex;
+  border-radius: 12px;
+  border: 1px solid rgb(96, 150, 180);
+  color: rgb(58, 152, 185);
+  align-items: center;
+  justify-content: center;
+  transition: all 0.4s ease;
+  cursor: pointer;
+}
+
+.features ul li:hover {
+  background-color: rgb(96, 150, 180);
+  color: rgb(250, 248, 241);
+}
+
+/* Button display */
+
+button {
+  padding: 15px;
+  border: none;
+  border-radius: 8px;
+  background-color: rgb(96, 150, 180);
+  cursor: pointer;
+  color: rgb(250, 248, 241);
+  transition: all 0.4s ease;
+}
+
+button:hover {
+  background-color: rgb(147, 191, 207);
+}
+
+/* Responsive */
+
+@media screen and (max-width: 400px) {
+  .box {
+    width: 330px;
+    height: fit-content;
+  }
+
+  .content .quotes {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+
+  .buttons .features {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: grid;
+    overflow: auto;
+    justify-content: space-between;
+  }
+
+  button {
+    width: max-content;
+  }
+  
+}
