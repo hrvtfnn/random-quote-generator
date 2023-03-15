@@ -10,6 +10,7 @@ This is a simple random quote generator with a copy button, a facebook share and
 
 # To Do List for the future
 
+- [x] Update CSS to look prettier
 - [ ] Update to be responsive
 - [ ] Make the copy button work
 - [ ] Add Facebook button
