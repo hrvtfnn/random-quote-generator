@@ -13,3 +13,5 @@ This is a simple random quote generator with a copy button, a facebook share and
 - [ ] Make the copy button work
 - [ ] Add Facebook button
 - [ ] Figure out how to make the "Read more" button connect to Wikipedia
+
+> Inspired by [CodingNepal](https://www.codingnepalweb.com/) watch the video [here](https://www.youtube.com/watch?v=I0v9ZOY3_0k&t=2s&ab_channel=CodingNepal).
