@@ -25,10 +25,10 @@ body {
 
 .box header {
   font-family: "Lobster", cursive;
-  font-size: 32px;
+  font-size: 3rem;
   font-weight: 600;
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 1.3rem;
 }
 
 /* Content */
@@ -36,7 +36,9 @@ body {
 .content .quotes {
   display: flex;
   justify-content: center;
-  margin-bottom: 20px;
+  text-align: center;
+  margin-bottom: 1.3rem;
+  letter-spacing: 0.02rem;
 }
 
 header,
@@ -46,17 +48,17 @@ header,
 }
 
 .quotes {
-  font-size: 22px;
+  font-size: 1.5rem;
 }
 
 .quotes i:first-child {
-  margin: 3px 10px 0 0;
-  font-size: 16px;
+  margin: 0.19rem 0.6rem 0 0;
+  font-size: 1rem;
 }
 
 .quotes i:last-child {
-  margin: 0 0 3px 10px;
-  font-size: 16px;
+  margin: 0 0 0.19rem 0.6rem;
+  font-size: 1rem;
   display: flex;
   align-items: flex-end;
 }
@@ -71,11 +73,11 @@ header,
 
 .box .buttons {
   border-top: 1px solid rgb(96, 150, 180);
-  margin-top: 20px;
+  margin-top: 1.3rem;
 }
 
 .buttons .features {
-  margin-top: 20px;
+  margin-top: 1.3rem;
   display: flex;
   justify-content: space-between;
 }
@@ -90,7 +92,7 @@ header,
   width: 47px;
   margin: 0 5px;
   display: flex;
-  border-radius: 12px;
+  border-radius: 0.8rem;
   border: 1px solid rgb(96, 150, 180);
   color: rgb(58, 152, 185);
   align-items: center;
@@ -107,12 +109,14 @@ header,
 /* Button display */
 
 button {
-  padding: 15px;
+  padding: 0.9rem;
   border: none;
-  border-radius: 8px;
+  border-radius: 0.5rem;
   background-color: rgb(96, 150, 180);
   cursor: pointer;
   color: rgb(250, 248, 241);
+  font-weight: 600;
+  font-size: 0.9rem;
   transition: all 0.4s ease;
 }
 
