@@ -4,7 +4,7 @@ This is a simple random quote generator with a copy button, a facebook share and
 
 # Screenshot 🎢
 
-![image](https://user-images.githubusercontent.com/122805112/225302632-378cbd3f-6f6a-413d-84b2-300ff1ef9825.png)
+![image](https://user-images.githubusercontent.com/122805112/225309973-81e7e28f-08c6-4eaf-b5b6-70b093b46351.png)
 
 # [Live demo](https://hrvtfnn.github.io/random-quote-generator/) 🚀
 
