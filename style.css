@@ -107,6 +107,24 @@ header,
   color: rgb(250, 248, 241);
 }
 
+.copy:before{
+  content: "Copied!🎉";
+  font-size: 0.8rem;
+  position: absolute;
+  transform: translateY(-2.5rem);
+  transition: all 0.4s ease-in-out;
+  padding: 5px;
+  border-radius: 10px;
+  background-color: rgb(144, 162, 172);
+  color:rgb(250, 248, 241);
+  display: none;
+}
+
+.copy.active:before{
+  display: flex;
+  opacity: 95%;
+}
+
 /* Button display */
 
 button {

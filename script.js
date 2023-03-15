@@ -16,4 +16,10 @@ function randomQuote(){
     });
 }
 
-quoteBtn.addEventListener("click", randomQuote);
+copyBtn.addEventListener("click", ()=>{
+    navigator.clipboard.writeText(quoteText.innerText);
+    copyBtn.classList.add("active");
+    setTimeout(function(){
+        copyBtn.classList.remove("active");
+    },1000)
+});
