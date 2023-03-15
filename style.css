@@ -119,31 +119,3 @@ button {
 button:hover {
   background-color: rgb(147, 191, 207);
 }
-
-/* Responsive */
-
-@media screen and (max-width: 400px) {
-  .box {
-    width: 330px;
-    height: fit-content;
-  }
-
-  .content .quotes {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
-  }
-
-  .buttons .features {
-    margin-top: 20px;
-    display: flex;
-    flex-direction: grid;
-    overflow: auto;
-    justify-content: space-between;
-  }
-
-  button {
-    width: max-content;
-  }
-  
-}
