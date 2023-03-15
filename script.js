@@ -1,7 +1,9 @@
 const quoteText = document.querySelector(".quote"),
-quoteBtn = document.querySelector("button"),
+quoteBtn = document.querySelector(".new"),
 authorName = document.querySelector(".name"),
 copyBtn = document.querySelector(".copy")
+
+// Random Quotes
 
 function randomQuote(){
     quoteBtn.classList.add("loading");
@@ -13,8 +15,14 @@ function randomQuote(){
         authorName.innerText = result.author;
         quoteBtn.classList.remove("loading");
         quoteBtn.innerText = "New Quote";
-    });
+});
 }
+
+// New Quote button
+
+quoteBtn.addEventListener("click", randomQuote);
+
+// Copy button
 
 copyBtn.addEventListener("click", ()=>{
     navigator.clipboard.writeText(quoteText.innerText);
@@ -22,4 +30,4 @@ copyBtn.addEventListener("click", ()=>{
     setTimeout(function(){
         copyBtn.classList.remove("active");
     },1000)
-});
+})
