@@ -12,8 +12,8 @@ This is a simple random quote generator with a copy button, a facebook share and
 
 - [x] Update CSS to look prettier
 - [x] Update to be responsive
-- [ ] Make the copy button work
-- [ ] Add Facebook button
+- [x] Make the copy button work
+- [x] Add Facebook button
 - [ ] Figure out how to make the "Read more" button connect to Wikipedia
 
 > Inspired by [CodingNepal](https://www.codingnepalweb.com/) watch the video [here](https://www.youtube.com/watch?v=I0v9ZOY3_0k&t=2s&ab_channel=CodingNepal).
