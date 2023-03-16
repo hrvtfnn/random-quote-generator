@@ -5,7 +5,6 @@ copyBtn = document.querySelector(".copy"),
 fbBtn = document.querySelector(".facebook")
 
 // Random Quotes
-
 function randomQuote(){
     quoteBtn.classList.add("loading");
     quoteBtn.innerText = "Loading Quote...";
@@ -16,15 +15,14 @@ function randomQuote(){
         authorName.innerText = result.author;
         quoteBtn.classList.remove("loading");
         quoteBtn.innerText = "New Quote";
+        
 });
 }
 
 // New Quote button
-
 quoteBtn.addEventListener("click", randomQuote);
 
 // Copy button
-
 copyBtn.addEventListener("click", ()=>{
     navigator.clipboard.writeText(quoteText.innerText);
     copyBtn.classList.add("active");
@@ -34,7 +32,6 @@ copyBtn.addEventListener("click", ()=>{
 })
 
 // Facebook button
-
 fbBtn.addEventListener("click", ()=>{
     let fbUrl = `https://facebook.com/share.php=${quoteText.innerText}`;
     window.open(fbUrl, "_blank");
