@@ -98,8 +98,9 @@ header,
   color: rgb(58, 152, 185);
   align-items: center;
   justify-content: center;
-  transition: all 0.4s ease;
+  transition: all 0.3s ease-in-out;
   cursor: pointer;
+  z-index: 1;
 }
 
 .features ul li:hover {
@@ -107,22 +108,51 @@ header,
   color: rgb(250, 248, 241);
 }
 
+/* Copy button popup message */
+
 .copy:before{
   content: "Copied!🎉";
   font-size: 0.8rem;
   position: absolute;
   transform: translateY(-2.5rem);
-  transition: all 0.4s ease-in-out;
+  transition: all 0.3s ease-in-out;
   padding: 5px;
   border-radius: 10px;
-  background-color: rgb(144, 162, 172);
+  background-color: rgb(96, 150, 180);
   color:rgb(250, 248, 241);
   display: none;
 }
 
 .copy.active:before{
   display: flex;
-  opacity: 95%;
+  opacity: 90%;
+}
+
+/* Read more on wikipedia */
+
+.features .read{
+  background-color:rgb(250, 248, 241);
+}
+
+.features .read-more{
+  width: max-content;
+  border: none;
+  font-size: 0.7rem;
+  background-color: rgb(96, 150, 180);
+  color: rgb(250, 248, 241);
+  padding: 15px 3px 15px 50px;
+  text-align: right;
+  z-index: 0;
+  position: absolute;
+  display: none;
+  transition: all 0.4 ease-in-out;
+}
+
+.read:hover ~ .read-more{
+  position: absolute;
+  display: block;
+  transform: translate(60%);
+  opacity: 85%;
 }
 
 /* Button display */
