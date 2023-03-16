@@ -1,7 +1,8 @@
 const quoteText = document.querySelector(".quote"),
 quoteBtn = document.querySelector(".new"),
 authorName = document.querySelector(".name"),
-copyBtn = document.querySelector(".copy")
+copyBtn = document.querySelector(".copy"),
+fbBtn = document.querySelector(".facebook")
 
 // Random Quotes
 
@@ -31,3 +32,12 @@ copyBtn.addEventListener("click", ()=>{
         copyBtn.classList.remove("active");
     },1000)
 })
+
+// Facebook button
+
+fbBtn.addEventListener("click", ()=>{
+    let fbUrl = `https://facebook.com/share.php=${quoteText.innerText}`;
+    window.open(fbUrl, "_blank");
+});
+
+// Read more on Wikipedia
