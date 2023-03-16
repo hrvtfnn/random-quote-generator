@@ -20,7 +20,9 @@ function randomQuote(){
 }
 
 // New Quote button
+if (quoteBtn){
 quoteBtn.addEventListener("click", randomQuote);
+}
 
 // Copy button
 copyBtn.addEventListener("click", ()=>{
