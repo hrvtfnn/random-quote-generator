@@ -190,4 +190,18 @@ button:hover {
     width: 35px;
     border-radius: 50px;
   }
+
+  .features .read-more{
+    width: max-content;
+    border: none;
+    font-size: 0.6rem;
+    background-color: rgb(96, 150, 180);
+    color: rgb(250, 248, 241);
+    padding: 10px;
+    padding-left: 35px;
+  }
+
+  .read:hover ~ .read-more{
+    transform: translate(60%);
+  }
 }
