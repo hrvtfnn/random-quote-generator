@@ -255,6 +255,7 @@ button:hover:focus {
   margin-inline: auto;
   border-radius: 1rem 0 0 1rem;
   background-color: var(--clr-text);
+  box-shadow: 5px 12px 35px var(--clr-shadow);
 }
 
 .color-picker input[type="radio"] {
