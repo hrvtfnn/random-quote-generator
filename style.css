@@ -175,7 +175,7 @@ header,
   opacity: 85%;
 }
 
-/* Button display */
+/* "New quote" button display */
 
 button {
   padding: 0.9rem;
@@ -193,9 +193,18 @@ button:hover {
   background-color: var(--clr-body-bg);
 }
 
+button:hover:focus {
+  background-color: var(--clr-shadow);
+}
+
 /* Responsive */
 
 @media (max-width: 400px) {
+
+  .box {
+    width: 350px;
+  }
+
   .box header {
     font-size: 2.5rem;
   }
@@ -212,27 +221,29 @@ button:hover {
   }
 
   .features .read-more {
-    width: max-content;
-    border: none;
+    max-width: 110px;
     font-size: 0.6rem;
     background-color: var(--clr-body-bg);
     color: var(--clr-card-bg);
-    padding: 10px;
-    padding-left: 35px;
+    padding: 5px;
+    padding-left: 20px;
+    display: block;
+    transform: translateX(90px);
   }
 
   .read:hover ~ .read-more {
-    transform: translate(60%);
+    transform: translateX(90px);
   }
 }
 
+
 /* Color switcher*/
 
-.color-picker{
+.color-picker {
   position: absolute;
   right: 0;
   top: 25px;
-  margin: auto 0 auto auto;
+  margin: 0;
 }
 
 .color-picker > fieldset {
@@ -306,6 +317,7 @@ button:hover {
   --clr-heading: hsl(209 50% 80%);
 }
 
+.pink,
 :root:has(#pink:checked) {
   --clr-body-bg: hsl(310 50% 90%);
   --clr-card-bg: hsl(310 50% 100%);
@@ -314,6 +326,7 @@ button:hover {
   --clr-shadow: hsl(310 50% 15%);
 }
 
+.light,
 :root:has(#light:checked) {
   --clr-body-bg: hsl(0 0% 90%);
   --clr-card-bg: hsl(0 0% 100%);
@@ -322,6 +335,7 @@ button:hover {
   --clr-shadow: hsl(0 0% 15%);
 }
 
+.green,
 :root:has(#green:checked) {
   --clr-body-bg: hsl(110, 34%, 68%);
   --clr-card-bg: hsl(109 50% 100%);
@@ -330,6 +344,7 @@ button:hover {
   --clr-shadow: hsl(109 50% 15%);
 }
 
+.dark,
 :root:has(#dark:checked) {
   --clr-body-bg: hsl(209 50% 10%);
   --clr-card-bg: hsl(209 50% 5%);
