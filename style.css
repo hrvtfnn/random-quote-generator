@@ -1,3 +1,11 @@
+:root {
+  --clr-body-bg: rgb(147, 191, 207);
+  --clr-card-bg: rgb(250, 248, 241);
+  --clr-shadow: rgb(96, 150, 180);
+  --clr-text: rgb(45, 58, 75);
+  --clr-heading: rgb(41, 44, 48);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -9,18 +17,30 @@ body {
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  background-color: rgb(147, 191, 207);
+  background-color: var(--clr-body-bg);
   font-family: "Montserrat", sans-serif;
+}
+
+/* Visualy hidden */
+
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
 }
 
 /* Box */
 
 .box {
   width: 610px;
-  background-color: rgb(250, 248, 241);
+  background-color: var(--clr-card-bg);
   border-radius: 25px;
   padding: 30px;
-  box-shadow: 0 12px 35px rgb(66, 125, 147);
+  box-shadow: 0 12px 35px var(--clr-shadow);
   margin: 20px;
 }
 
@@ -45,7 +65,7 @@ body {
 header,
 .content,
 .quotes i {
-  color: rgb(41, 44, 48);
+  color: var(--clr-text);
 }
 
 .quotes {
@@ -73,7 +93,7 @@ header,
 /* Features */
 
 .box .buttons {
-  border-top: 1px solid rgb(96, 150, 180);
+  border-top: 1px solid var(--clr-shadow);
   margin-top: 1.3rem;
 }
 
@@ -94,8 +114,8 @@ header,
   margin: 0 5px;
   display: flex;
   border-radius: 0.8rem;
-  border: 1px solid rgb(96, 150, 180);
-  color: rgb(58, 152, 185);
+  border: 1px solid var(--clr-shadow);
+  color: var(--clr-shadow);
   align-items: center;
   justify-content: center;
   transition: all 0.3s ease-in-out;
@@ -104,13 +124,13 @@ header,
 }
 
 .features ul li:hover {
-  background-color: rgb(96, 150, 180);
-  color: rgb(250, 248, 241);
+  background-color: var(--clr-shadow);
+  color: var(--clr-card-bg);
 }
 
 /* Copy button popup message */
 
-.copy:before{
+.copy:before {
   content: "Copied!🎉";
   font-size: 0.8rem;
   position: absolute;
@@ -118,28 +138,28 @@ header,
   transition: all 0.3s ease-in-out;
   padding: 5px;
   border-radius: 10px;
-  background-color: rgb(96, 150, 180);
-  color:rgb(250, 248, 241);
+  background-color: var(--clr-shadow);
+  color: var(--clr-card-bg);
   display: none;
 }
 
-.copy.active:before{
+.copy.active:before {
   display: flex;
   opacity: 90%;
 }
 
 /* Read more on wikipedia */
 
-.features .read{
-  background-color:rgb(250, 248, 241);
+.features .read {
+  background-color: var(--clr-card-bg);
 }
 
-.features .read-more{
+.features .read-more {
   width: max-content;
   border: none;
   font-size: 0.7rem;
-  background-color: rgb(96, 150, 180);
-  color: rgb(250, 248, 241);
+  background-color: var(--clr-shadow);
+  color: var(--clr-card-bg);
   padding: 15px 3px 15px 50px;
   text-align: right;
   z-index: 0;
@@ -148,7 +168,7 @@ header,
   transition: all 0.4 ease-in-out;
 }
 
-.read:hover ~ .read-more{
+.read:hover ~ .read-more {
   position: absolute;
   display: block;
   transform: translate(60%);
@@ -161,16 +181,16 @@ button {
   padding: 0.9rem;
   border: none;
   border-radius: 0.5rem;
-  background-color: rgb(96, 150, 180);
+  background-color: var(--clr-shadow);
   cursor: pointer;
-  color: rgb(250, 248, 241);
+  color: var(--clr-card-bg);
   font-weight: 600;
   font-size: 0.9rem;
   transition: all 0.4s ease;
 }
 
 button:hover {
-  background-color: rgb(147, 191, 207);
+  background-color: var(--clr-body-bg);
 }
 
 /* Responsive */
@@ -191,17 +211,129 @@ button:hover {
     border-radius: 50px;
   }
 
-  .features .read-more{
+  .features .read-more {
     width: max-content;
     border: none;
     font-size: 0.6rem;
-    background-color: rgb(96, 150, 180);
-    color: rgb(250, 248, 241);
+    background-color: var(--clr-body-bg);
+    color: var(--clr-card-bg);
     padding: 10px;
     padding-left: 35px;
   }
 
-  .read:hover ~ .read-more{
+  .read:hover ~ .read-more {
     transform: translate(60%);
   }
+}
+
+/* Color switcher*/
+
+.color-picker{
+  position: absolute;
+  right: 0;
+  top: 25px;
+  margin: auto 0 auto auto;
+}
+
+.color-picker > fieldset {
+  border: 0;
+  display: flex;
+  gap: 2rem;
+  width: fit-content;
+  padding: 1rem 1rem;
+  margin-inline: auto;
+  border-radius: 1rem 0 0 1rem;
+  background-color: var(--clr-text);
+}
+
+.color-picker input[type="radio"] {
+  appearance: none;
+  width: 1rem;
+  height: 1rem;
+  outline: 3px solid var(--radio-color, currentColor);
+  outline-offset: 3px;
+  border-radius: 50%;
+}
+
+.color-picker input[type="radio"]:checked {
+  background-color: var(--radio-color);
+}
+
+.color-picker input[type="radio"]#blue {
+  --radio-color: rgb(96, 150, 180);
+}
+.color-picker input[type="radio"]#pink {
+  --radio-color: pink;
+}
+.color-picker input[type="radio"]#light {
+  --radio-color: gray;
+}
+.color-picker input[type="radio"]#green {
+  --radio-color: green;
+}
+.color-picker input[type="radio"]#dark {
+  --radio-color: #232323;
+}
+
+.pink {
+  --clr-body-bg: hsl(310 50% 90%);
+  --clr-card-bg: hsl(310 50% 100%);
+  --clr-text: hsl(310 50% 15%);
+  --clr-heading: hsl(310 50% 25%);
+  --clr-shadow: hsl(310 50% 15%);
+}
+
+.light {
+  --clr-body-bg: hsl(0 0% 90%);
+  --clr-card-bg: hsl(0 0% 100%);
+  --clr-text: hsl(0 0% 15%);
+  --clr-heading: hsl(0 0% 25%);
+  --clr-shadow: hsl(0 0% 15%);
+}
+
+.green {
+  --clr-body-bg: hsl(109 50% 90%);
+  --clr-card-bg: hsl(109 50% 100%);
+  --clr-text: hsl(109 50% 15%);
+  --clr-heading: hsl(109 50% 25%);
+  --clr-shadow: hsl(109 50% 15%);
+}
+
+.dark {
+  --clr-body-bg: hsl(209 50% 10%);
+  --clr-card-bg: hsl(209 50% 5%);
+  --clr-text: hsl(209 50% 90%);
+  --clr-heading: hsl(209 50% 80%);
+}
+
+:root:has(#pink:checked) {
+  --clr-body-bg: hsl(310 50% 90%);
+  --clr-card-bg: hsl(310 50% 100%);
+  --clr-text: hsl(310 50% 15%);
+  --clr-heading: hsl(310 50% 25%);
+  --clr-shadow: hsl(310 50% 15%);
+}
+
+:root:has(#light:checked) {
+  --clr-body-bg: hsl(0 0% 90%);
+  --clr-card-bg: hsl(0 0% 100%);
+  --clr-text: hsl(0 0% 15%);
+  --clr-heading: hsl(0 0% 25%);
+  --clr-shadow: hsl(0 0% 15%);
+}
+
+:root:has(#green:checked) {
+  --clr-body-bg: hsl(110, 34%, 68%);
+  --clr-card-bg: hsl(109 50% 100%);
+  --clr-text: hsl(109 50% 15%);
+  --clr-heading: hsl(109 50% 25%);
+  --clr-shadow: hsl(109 50% 15%);
+}
+
+:root:has(#dark:checked) {
+  --clr-body-bg: hsl(209 50% 10%);
+  --clr-card-bg: hsl(209 50% 5%);
+  --clr-text: hsl(227, 5%, 67%);
+  --clr-heading: hsl(209 50% 80%);
+  --clr-shadow: hsla(232, 4%, 38%, 0.705);
 }
